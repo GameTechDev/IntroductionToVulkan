@@ -183,6 +183,9 @@ namespace ApiWithoutSecrets {
         strlen( title ),
         title );
 
+      xcb_map_window( Parameters.Connection, Parameters.Handle );
+      xcb_flush( Parameters.Connection );
+
       return true;
     }
 
