@@ -180,7 +180,7 @@ namespace ApiWithoutSecrets {
 
   bool Tutorial06::CreateTexture() {
     int width = 0, height = 0, data_size = 0;
-    std::vector<char> texture_data = Tools::GetImageData( "Data/Tutorials/06/texture.png", 4, &width, &height, nullptr, &data_size );
+    std::vector<char> texture_data = Tools::GetImageData( "../Data/Tutorials/06/texture.png", 4, &width, &height, nullptr, &data_size );
     if( texture_data.size() == 0 ) {
       return false;
     }
@@ -605,8 +605,8 @@ namespace ApiWithoutSecrets {
   }
 
   bool Tutorial06::CreatePipeline() {
-    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> vertex_shader_module = CreateShaderModule( "Data/Tutorials/06/shader.vert.spv" );
-    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> fragment_shader_module = CreateShaderModule( "Data/Tutorials/06/shader.frag.spv" );
+    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> vertex_shader_module = CreateShaderModule( "../Data/Tutorials/06/shader.vert.spv" );
+    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> fragment_shader_module = CreateShaderModule( "../Data/Tutorials/06/shader.frag.spv" );
 
     if( !vertex_shader_module || !fragment_shader_module ) {
       return false;
