@@ -62,7 +62,7 @@ macro( add_executable _type _number _name )
 
 	if( EXISTS "${CMAKE_SOURCE_DIR}/${_type}/${_number}/Data" )
 		file( GLOB DATA_FILES "${CMAKE_SOURCE_DIR}/${_type}/${_number}/Data/*.*" )
-		file( COPY ${DATA_FILES} DESTINATION "${CMAKE_SOURCE_DIR}/build/Data/${_type}/${_number}/" )
+                file( COPY ${DATA_FILES} DESTINATION "${CMAKE_BINARY_DIR}/Data/${_type}/${_number}/" )
 	endif()
 endmacro()
 
