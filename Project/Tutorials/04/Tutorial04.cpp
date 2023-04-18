@@ -145,8 +145,8 @@ namespace ApiWithoutSecrets {
   }
 
   bool Tutorial04::CreatePipeline() {
-    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> vertex_shader_module = CreateShaderModule( "Data/Tutorials/04/shader.vert.spv" );
-    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> fragment_shader_module = CreateShaderModule( "Data/Tutorials/04/shader.frag.spv" );
+    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> vertex_shader_module = CreateShaderModule( "../Data/Tutorials/04/shader.vert.spv" );
+    Tools::AutoDeleter<VkShaderModule, PFN_vkDestroyShaderModule> fragment_shader_module = CreateShaderModule( "../Data/Tutorials/04/shader.frag.spv" );
 
     if( !vertex_shader_module || !fragment_shader_module ) {
       return false;
